@@ -1,10 +1,17 @@
 :root {
   --heading-font-family: "Sacramento", cursive;
   --default-font-family: "Lato", sans-serif;
-  --primary-color: RGB(245, 240, 236);
-  --secondary-color: RGB(0, 0, 0);
-  --third-color: RGB(189, 141, 121);
+  --extra-font-family: "Lustria", serif;
+  --primary-color: #d279c3;
+  --secondary-color: #ededf4;
+  --third-color: #a579d2;
+  --fourth-color: #7988d2;
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
+body {
+  font-family: var(--default-font-family);
+}
+
 h1,
 h4,
 h5,
@@ -17,15 +24,28 @@ h1 {
   font-size: 96px;
 }
 
+.features h3 {
+  color: var(--primary-color);
+}
+
 h3 {
   font-size: 36px;
+  font-family: var(--default-font-family);
+  color: var(--third-color);
+}
+
+.container h3 {
+  font-family: var(--heading-font-family);
+}
+
+p {
   font-family: var(--default-font-family);
 }
 
 .hero h2 {
   font-family: var(--default-font-family);
   font-size: 24px;
-  color: RGB(249, 249, 249);
+  color: var(--primary-color);
 }
 
 .hero {
@@ -47,12 +67,103 @@ h3 {
 }
 
 .btn-branding {
-  background-color: var(--primary-color);
+  background-color: white;
   color: var(--third-color);
   border-radius: 4px;
   font-size: 18px;
   line-height: 27px;
-  padding: 15px 30px;
+  padding: 20px 15px;
   text-decoration: none;
-  border: 2px var(--third-color) solid;
+  box-shadow: var(--box-shadow);
+  transition: all 250ms ease-in-out;
+}
+
+.btn-branding:hover {
+  padding: 23px 18px;
+  font-size: 20px;
+}
+
+.primary-link {
+  border-radius: 4px;
+  padding: 20px 15px;
+  text-decoration: none;
+  text-transform: capitalize;
+  background: var(--third-color);
+  box-shadow: var(--box-shadow);
+  color: white;
+  transition: all 250ms ease-in-out;
+}
+
+.primary-link:hover {
+  padding: 23px 18px;
+  font-size: 20px;
+}
+
+.navbar {
+  font-family: var(--default-font-family);
+  font-weight: bolder;
+}
+
+.navbar-brand {
+  border: 2px solid var(--fourth-color);
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  .home-img {
+    display: none;
+  }
+
+  p,
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  .primary-btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    margin-top: 100px;
+  }
+
+  h1,
+  h2 {
+    font-size: 24px;
+  }
+
+  .home-img {
+    display: none;
+  }
+
+  p,
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .primary-btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer {
+    padding-top: 50px;
+  }
 }
