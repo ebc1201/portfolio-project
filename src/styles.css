@@ -24,7 +24,7 @@ h1 {
   font-size: 96px;
 }
 
-.features h3 {
+.sub-head h3 {
   color: var(--primary-color);
 }
 
@@ -129,10 +129,22 @@ p {
   width: 400px;
 }
 
+.about-section {
+  max-width: 1000px;
+}
+
 /* Media Queries */
 @media (max-width: 800px) {
   h1 {
-    font-size: 48px;
+    font-size: 48px !important;
+  }
+
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .mini-hero {
+    padding: 30px 20px;
   }
 
   .home-img {
@@ -160,13 +172,23 @@ p {
     margin-top: 100px;
   }
 
-  h1,
-  h2 {
-    font-size: 24px;
+  h1 {
+    font-size: 48px !important;
+  }
+
+  .mini-hero {
+    padding: 20px 20px;
   }
 
   .home-img {
     display: none;
+  }
+
+  .about-img {
+    display: flex;
+    justify-content: center;
+    max-width: 350px;
+    padding-left: 5px;
   }
 
   .container p {
