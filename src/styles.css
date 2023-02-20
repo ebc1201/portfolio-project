@@ -79,8 +79,8 @@ p {
 }
 
 .btn-branding:hover {
-  padding: 23px 18px;
-  font-size: 20px;
+  background-color: var(--fourth-color);
+  color: var(--secondary-color);
 }
 
 .primary-link {
@@ -95,8 +95,7 @@ p {
 }
 
 .primary-link:hover {
-  padding: 23px 18px;
-  font-size: 20px;
+  background-color: var(--fourth-color);
 }
 
 .navbar {
@@ -106,6 +105,28 @@ p {
 
 .navbar-brand {
   border: 2px solid var(--fourth-color);
+  transition: all 250ms ease-in-out;
+}
+
+.navbar-brand:hover {
+  border: 2px solid var(--third-color);
+  color: var(--primary-color);
+}
+
+.navbar-nav .active {
+  color: var(--fourth-color) !important;
+  text-decoration: overline;
+}
+.navbar-nav .nav-link {
+  transition: all 250ms ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--third-color) !important;
+}
+
+.home-img {
+  width: 400px;
 }
 
 /* Media Queries */
@@ -146,6 +167,10 @@ p {
 
   .home-img {
     display: none;
+  }
+
+  .container p {
+    padding-right: 0;
   }
 
   p,
