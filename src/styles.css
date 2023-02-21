@@ -38,6 +38,11 @@ h4 {
   color: var(--primary-color);
 }
 
+.work-inquiry {
+  font-size: 36px;
+  color: var(--third-color);
+}
+
 .container h3 {
   font-family: var(--heading-font-family);
 }
@@ -152,6 +157,35 @@ p {
   text-decoration: none;
   color: var(--fourth-color);
 }
+
+footer {
+  margin: 60px 0;
+}
+
+footer .contact-box {
+  background-color: var(--secondary-color);
+  padding: 30px 120px;
+  border-radius: 10px;
+}
+
+footer .contact-box p {
+  margin: 0;
+}
+
+footer .social-links a {
+  margin: 0 20px;
+  color: var(--third-color);
+  background-color: var(--secondary-color);
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: all 250ms ease-in-out;
+}
+
+footer .social-links a:hover {
+  color: var(--fourth-color);
+}
+
 /* Media Queries */
 @media (max-width: 800px) {
   h1 {
@@ -227,9 +261,5 @@ p {
   .primary-btn {
     display: flex;
     justify-content: center;
-  }
-
-  footer {
-    padding-top: 50px;
   }
 }
