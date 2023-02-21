@@ -70,6 +70,10 @@ p {
   color: var(--third-color);
 }
 
+.home {
+  max-width: 1000px;
+}
+
 .btn-branding {
   background-color: white;
   color: var(--third-color);
@@ -144,6 +148,10 @@ p {
   padding-left: 60px;
 }
 
+.contact-container a {
+  text-decoration: none;
+  color: var(--fourth-color);
+}
 /* Media Queries */
 @media (max-width: 800px) {
   h1 {
