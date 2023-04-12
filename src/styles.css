@@ -176,9 +176,7 @@ p {
 }
 
 .about-img {
-  width: 400px;
-  padding-left: 0;
-  margin: 0;
+  margin-left: 70px;
 }
 .intro {
   font-size: 28px;
@@ -272,7 +270,7 @@ footer p a:hover {
 }
 
 /* Media Queries */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   h1 {
     font-size: 48px !important;
   }
@@ -287,6 +285,13 @@ footer p a:hover {
 
   .home-img {
     display: none;
+  }
+
+  .about-img {
+    margin-left: 0;
+  }
+  .portfolio {
+    padding-left: 0;
   }
 
   p,
@@ -320,6 +325,14 @@ footer p a:hover {
 
   .home-img {
     display: none;
+  }
+
+  .portfolio {
+    padding-left: 0;
+  }
+
+  .pe-5 {
+    padding-right: 0 !important;
   }
 
   .about-img {
