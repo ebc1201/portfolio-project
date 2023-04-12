@@ -96,10 +96,6 @@ p {
   padding-top: 160px;
 }
 
-.home {
-  /* max-width: 1000px; */
-}
-
 .btn-branding {
   background-color: white;
   color: var(--third-color);
