@@ -1,15 +1,17 @@
 :root {
-  --heading-font-family: "Sacramento", cursive;
-  --default-font-family: "Lato", sans-serif;
-  --extra-font-family: "Lustria", serif;
-  --primary-color: #d279c3;
+  --heading-font-family: 'Sacramento', cursive;
+  --default-font-family: 'Poppins', sans-serif;
+  --primary-color: #8c52ff;
   --secondary-color: #ededf4;
-  --third-color: #a579d2;
-  --fourth-color: #7988d2;
+  --third-color: #8c52ff;
+  --fourth-color: #8c52ff;
+  --text-color: #504e70;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 body {
   font-family: var(--default-font-family);
+  color: var(--text-color);
+  font-size: 20px;
 }
 
 h1 {
@@ -29,18 +31,17 @@ h1 {
 h3 {
   font-size: 36px;
   font-family: var(--default-font-family);
-  color: var(--third-color);
+  color: var(--primary-color);
 }
 
 h4 {
   font-size: 24px;
   font-family: var(--default-font-family);
-  color: var(--primary-color);
 }
 
 .work-inquiry {
   font-size: 36px;
-  color: var(--third-color);
+  color: var(--primary-color);
 }
 
 .container h3 {
@@ -72,7 +73,7 @@ p {
 .mini-hero h1 {
   font-family: var(--heading-font-family);
   font-size: 96px;
-  color: var(--third-color);
+  color: var(--primary-color);
 }
 
 .home {
@@ -113,21 +114,18 @@ p {
 
 .navbar {
   font-family: var(--default-font-family);
-  font-weight: bolder;
 }
 
-.navbar-brand {
-  border: 2px solid var(--fourth-color);
-  transition: all 250ms ease-in-out;
+.nav-logo {
+  max-width: 60px;
 }
 
 .navbar-brand:hover {
-  border: 2px solid var(--third-color);
   color: var(--primary-color);
 }
 
 .navbar-nav .active {
-  color: var(--fourth-color) !important;
+  color: var(--primary-color) !important;
   text-decoration: overline;
 }
 .navbar-nav .nav-link {
@@ -135,21 +133,38 @@ p {
 }
 
 .navbar-nav .nav-link:hover {
-  color: var(--third-color) !important;
+  color: var(--primary-color) !important;
 }
 
 .home-img {
   width: 600px;
 }
 
-.about-img {
-  width: 600px;
-  padding: 0;
-  margin: 0;
+.about-section {
+  padding-top: 100px;
 }
 
-.about-section {
-  /* max-width: 1000px; */
+.about-img {
+  width: 400px;
+  padding-left: 0;
+  margin: 0;
+}
+.intro {
+  font-size: 28px;
+}
+
+.intro span {
+  font-family: var(--heading-font-family);
+  font-size: 36px;
+  color: var(--primary-color);
+}
+
+.occupation {
+  font-size: 28px;
+}
+
+.occupation span {
+  color: var(--primary-color);
 }
 
 .portfolio {
@@ -157,11 +172,17 @@ p {
   justify-content: space-around;
   max-width: 1000px;
   padding-left: 60px;
+  padding-top: 100px;
+}
+
+.contact-container {
+  padding-top: 100px;
 }
 
 .contact-container a {
   text-decoration: none;
   color: var(--fourth-color);
+  font-size: 16px;
 }
 
 footer {
