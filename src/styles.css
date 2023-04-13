@@ -176,24 +176,28 @@ p {
 }
 .intro {
   font-size: 28px;
-  line-height: 1.5;
 }
 
 .intro span {
   font-family: var(--heading-font-family);
   font-size: 36px;
   color: var(--primary-color);
-  line-height: 1.5;
+}
+
+p.intro {
+  margin-bottom: 0 !important;
 }
 
 .occupation {
   font-size: 28px;
-  line-height: 1.5;
+}
+
+p.occupation {
+  margin-bottom: 0 !important;
 }
 
 .occupation span {
   color: var(--primary-color);
-  line-height: 1.5;
 }
 
 .portfolio {
