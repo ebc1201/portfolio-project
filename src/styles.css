@@ -59,6 +59,7 @@ h3 {
 h4 {
   font-size: 28px;
   font-family: var(--default-font-family);
+  text-align: center;
 }
 
 .home p {
@@ -212,6 +213,10 @@ p.occupation {
   font-size: 16px;
 }
 
+.sub-head .portfolio {
+  padding-bottom: 0;
+}
+
 .contact-container {
   padding-top: 100px;
 }
@@ -275,8 +280,13 @@ footer p a:hover {
     font-size: 48px !important;
   }
 
-  .hero {
-    padding: 80px 20px;
+  h4 {
+    text-align: center;
+    padding: 0;
+  }
+
+  .home p {
+    padding-right: 0 !important;
   }
 
   .mini-hero {
@@ -284,14 +294,14 @@ footer p a:hover {
   }
 
   .home-img {
-    display: none;
+    display: 100%;
   }
 
   .about-img {
     margin-left: 0;
   }
   .portfolio {
-    padding-left: 0;
+    padding: 50px;
   }
 
   p,
@@ -308,6 +318,50 @@ footer p a:hover {
   footer {
     padding-top: 50px;
   }
+}
+@media (max-width: 800px) {
+  h1 {
+    font-size: 48px !important;
+  }
+
+  h4 {
+    text-align: center;
+    padding: 0;
+  }
+
+  .home p {
+    padding-right: 0 !important;
+  }
+
+  .mini-hero {
+    padding: 30px 20px;
+  }
+
+  .home-img {
+    display: none;
+  }
+}
+
+.about-img {
+  margin-left: 0;
+}
+.portfolio {
+  padding: 50px;
+}
+
+p,
+h2,
+h3 {
+  text-align: center;
+}
+
+.primary-btn {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  padding-top: 50px;
 }
 
 @media (max-width: 400px) {
