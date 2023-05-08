@@ -37,12 +37,9 @@ body {
 }
 
 h1 {
-  font-family: 'Poppins';
-  color: black;
-}
-
-h1 {
-  font-size: 96px;
+  font-size: 2em;
+  color: var(--secondary-color);
+  text-transform: uppercase;
 }
 
 .sub-head h3 {
@@ -51,7 +48,7 @@ h1 {
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 1.5em;
   font-family: var(--default-font-family);
   color: var(--primary-color);
 }
@@ -63,7 +60,7 @@ h4 {
 }
 
 .home p {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .work-inquiry {
@@ -81,21 +78,43 @@ p {
 
 .hero h2 {
   font-family: var(--default-font-family);
-  font-size: 24px;
-  color: var(--primary-color);
+  font-size: 1.5rem;
+  color: var(--secondary-color);
 }
 
 .hero {
-  background: linear-gradient(
-    270deg,
-    hsla(300, 100%, 50%, 0.1) 0%,
-    hsla(208, 47%, 43%, 0.1) 50%,
-    hsla(180, 100%, 50%, 0.1) 100%
-  );
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::after {
+  width: 100%;
+  height: 100%;
+  content: ' ';
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  object-fit: cover;
+}
+
+.hero .caption {
+  position: relative;
+  z-index: 20;
   text-align: center;
-  padding-bottom: 60px;
-  padding-top: 160px;
-  box-shadow: var(--box-shadow);
 }
 
 .btn-branding {
@@ -131,30 +150,6 @@ p {
   color: var(--primary-color);
 }
 
-.navbar {
-  font-family: var(--default-font-family);
-  background: white;
-}
-
-.nav-logo {
-  max-width: 60px;
-}
-
-.navbar-brand:hover {
-  color: var(--primary-color);
-}
-
-.navbar-nav .active {
-  color: var(--primary-color) !important;
-}
-.navbar-nav .nav-link {
-  transition: all 250ms ease-in-out;
-}
-
-.navbar-nav .nav-link:hover {
-  color: var(--fourth-color) !important;
-}
-
 .home-img {
   width: 600px;
 }
@@ -173,7 +168,7 @@ p {
 }
 
 .about-img {
-  margin-left: 70px;
+  border-radius: 50%;
 }
 .intro {
   font-size: 28px;
@@ -226,23 +221,20 @@ p.occupation {
   color: var(--primary-color);
   font-size: 16px;
 }
-.contact-container a:hover {
-  color: var(--fourth-color);
-  transition: all 250ms ease-in-out;
-}
 
 footer {
   margin: 60px 0;
 }
 
 footer .contact-box {
-  background-color: var(--secondary-color);
+  background-color: #212529;
   padding: 30px 120px;
   border-radius: 10px;
 }
 
 footer .contact-box p {
   margin: 0;
+  color: var(--secondary-color) !important;
 }
 
 footer .social-links a {
@@ -253,10 +245,6 @@ footer .social-links a {
   font-size: 18px;
   border-radius: 50%;
   transition: all 250ms ease-in-out;
-}
-
-footer .social-links a:hover {
-  color: var(--fourth-color);
 }
 
 footer p {
@@ -275,9 +263,13 @@ footer p a:hover {
 }
 
 /* Media Queries */
-@media (max-width: 900px) {
-  h1 {
-    font-size: 48px !important;
+@media screen and (min-width: 992px) {
+  .hero .caption h1 {
+    font-size: 3rem !important;
+  }
+
+  .hero .caption h2 {
+    font-size: 2rem !important;
   }
 
   h4 {
@@ -287,10 +279,6 @@ footer p a:hover {
 
   .home p {
     padding-right: 0 !important;
-  }
-
-  .mini-hero {
-    padding: 30px 20px;
   }
 
   .home-img {
@@ -320,9 +308,23 @@ footer p a:hover {
   }
 }
 
-@media (max-width: 765px) {
-  h1 {
-    font-size: 48px !important;
+@media screen and (min-width: 1200px) {
+  .hero .caption h1 {
+    font-size: 4rem !important;
+  }
+
+  .hero .caption h2 {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero .caption h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .hero .caption h2 {
+    font-size: 1.75rem !important;
   }
 
   h4 {
@@ -332,14 +334,6 @@ footer p a:hover {
 
   .home p {
     padding-right: 0 !important;
-  }
-
-  .mini-hero {
-    padding: 30px 20px;
-  }
-
-  .home-img {
-    display: none;
   }
 
   .about-img {
@@ -366,7 +360,7 @@ footer p a:hover {
   }
 }
 
-@media (max-width: 575px) {
+@media screen and (min-width: 575px) {
   body {
     margin-top: 100px;
   }
@@ -377,10 +371,6 @@ footer p a:hover {
 
   .mini-hero {
     padding: 20px 20px;
-  }
-
-  .home-img {
-    display: none;
   }
 
   .pe-5 {
@@ -418,21 +408,13 @@ footer p a:hover {
   }
 }
 
-@media (max-width: 400px) {
+@media screen and (min-width: 400px) {
   body {
     margin-top: 100px;
   }
 
   h1 {
     font-size: 48px !important;
-  }
-
-  .mini-hero {
-    padding: 20px 20px;
-  }
-
-  .home-img {
-    display: none;
   }
 
   .pe-5 {

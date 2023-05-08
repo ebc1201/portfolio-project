@@ -9,14 +9,15 @@
       content="Erica Chambers is an up-and-coming front-end developer experienced in HTML, CSS, JavaScript, React, Bootstrap, GitHub and Webhosting."
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="src/styles.css" />
@@ -45,48 +46,43 @@
     <title>Front-end Developer - Erica Chambers</title>
   </head>
   <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-light fixed-top"
-      style="background-color: #ffffff"
-    >
-      <div class="container-fluid">
-        <a class="navbar-brand ps-2 pe-2" href="index.html"
-          ><img class="nav-logo" src="/src/images/3.png" alt="" srcset=""
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto">
-            <a
-              class="nav-link active"
-              aria-current="page"
-              href="#"
-              title="Homepage"
-              >Home</a
-            >
-            <a class="nav-link" href="about.html">About Me</a>
-            <a class="nav-link" href="portfolio.html">Portfolio</a>
-            <a class="nav-link" href="contact.html">Contact</a>
-          </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="index.html"></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="index.html">Home</a>
+          <a class="nav-item nav-link" href="about.html">About Me</a>
+          <a class="nav-item nav-link" href="portfolio.html">Portfolio</a>
+          <a class="nav-item nav-link" href="contact.html">Contact</a>
         </div>
       </div>
     </nav>
     <div class="hero">
-      <h1>Erica Chambers</h1>
-      <h2 class="mb-5">Front-end Developer, based in Alabama</h2>
-      <div>
-        <a href="contact.html" class="btn-branding" title="Contact Erica"
-          >Contact Me</a
-        >
+      <video loop muted autoplay preload="auto">
+        <source
+          src="src/videos/pexels-davis-vidal-8482781-1920x1080-25fps.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="caption">
+        <h1>Erica Chambers</h1>
+        <h2 class="mb-5">Front-end Developer on the Gulf Coast</h2>
+        <div>
+          <a href="contact.html" class="btn-branding" title="Contact Erica"
+            >Contact Me</a
+          >
+        </div>
       </div>
     </div>
     <div class="sub-head">
@@ -94,7 +90,7 @@
     </div>
     <div class="container home">
       <div class="row">
-        <div class="col-md-6 homepage">
+        <div class="col-md-6 col-lg-6 homepage">
           <img
             src="src/images/dictionary-app.png"
             class="img-fluid p-2 shadow rounded home-img"
@@ -102,8 +98,8 @@
             title="Dictionary app"
           />
         </div>
-        <div class="col-md-6">
-          <h4 class="mb-3">Dictionary App</h4>
+        <div class="col-md-6 col-lg-6">
+          <h4 class="mt-5 mb-3">Dictionary App</h4>
           <p class="pe-md-5">
             Created a full-stack dictionary application from scratch using
             React.js, HTML, CSS, and JavaScript. Implemented search
@@ -123,7 +119,14 @@
         </div>
       </div>
       <div class="row mt-5">
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-6">
+          <img
+            src="src/images/react-wx.png"
+            class="img-fluid p-2 shadow rounded home-img"
+            alt="Weather app screenshot"
+          />
+        </div>
+        <div class="col-md-6 col-lg-6">
           <h4 class="mt-5 mb-3">Weather App</h4>
           <p class="pe-md-5">
             Built a weather application using React.js that allows users to
@@ -142,13 +145,6 @@
               >Launch Weather App</a
             >
           </div>
-        </div>
-        <div class="col-md-6">
-          <img
-            src="src/images/react-wx.png"
-            class="img-fluid p-2 shadow rounded home-img"
-            alt="Weather app screenshot"
-          />
         </div>
       </div>
     </div>
