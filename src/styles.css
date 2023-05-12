@@ -3,7 +3,7 @@
   --default-font-family: 'Poppins', sans-serif;
   --primary-color: #8c52ff;
   --secondary-color: #ededf4;
-  --third-color: #8c52ff;
+  --third-color: #212529;
   --fourth-color: #01ffff;
   --text-color: #504e70;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -119,7 +119,7 @@ p {
 
 .btn-branding {
   background-color: white;
-  color: var(--third-color);
+  color: var(--primary-color);
   border-radius: 4px;
   font-size: 18px;
   line-height: 27px;
@@ -139,7 +139,7 @@ p {
   padding: 20px 15px;
   text-decoration: none;
   text-transform: capitalize;
-  background: var(--third-color);
+  background: var(--primary-color);
   box-shadow: var(--box-shadow);
   color: white;
   transition: all 250ms ease-in-out;
@@ -260,7 +260,7 @@ footer .contact-box p {
 
 footer .social-links a {
   margin: 0 20px;
-  color: var(--third-color);
+  color: var(--primary-color);
   background-color: var(--secondary-color);
   padding: 10px 14px;
   font-size: 18px;
@@ -275,12 +275,7 @@ footer p {
 
 footer p a {
   text-decoration: none;
-  color: var(--third-color);
-  transition: all 250ms ease-in-out;
-}
-
-footer p a:hover {
-  color: var(--fourth-color);
+  color: var(--primary-color);
 }
 
 /* Media Queries */
